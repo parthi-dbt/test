@@ -8,4 +8,4 @@ with customers as (
     from dbt_db.dbt_schema.customers
 
 )
-select * from customers;
+select * from customers

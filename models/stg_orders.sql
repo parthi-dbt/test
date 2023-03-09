@@ -9,4 +9,4 @@ with orders as (
     from dbt_db.dbt_schema.orders
 
 )
-select * from orders;
+select * from orders
