@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from dbt_db.dbt_schema.orders
+    from raw.jaffle_shop.orders
 
 )
 select * from orders
