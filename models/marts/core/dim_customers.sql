@@ -1,11 +1,19 @@
-with customer_orders as (
+with customers as (
+    select * from {{ref('stg_customers')}}
+),
+orders as (
+    select * from {{ref('stg_orders')}}
+),
+
+
+ customer_orders as (
     select
         customer_id,
         min(order_date) as first_order_date,
         max(order_date) as most_recent_order_date,
         count(order_id) as number_of_orders
 
-    from dbt_db.dbt_schema.orders
+    from raw.jaffle_shop.orders
 
     group by 1
 )
@@ -18,6 +26,7 @@ select
     customer_orders.most_recent_order_date,
     coalesce(customer_orders.number_of_orders, 0) as number_of_orders
 
-from dbt_db.dbt_schema.customers
+from raw.jaffle_shop.customers
 
 left join customer_orders using (customer_id)
+
