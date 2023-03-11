@@ -6,7 +6,7 @@ with payments as (
     status,
     amount, 
     created
-    from dbt_db.stripe.payment
+    from raw.stripe.payment
     )
-    select * from payments
+    select * from payments;
 
