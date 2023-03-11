@@ -6,7 +6,7 @@ with payments as (
     status,
     amount, 
     created
-    from raw.stripe.payment
+    from  RAW.STRIPE.payment
     )
-    select * from payments;
+    select * from payments
 
