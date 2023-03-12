@@ -36,8 +36,12 @@ models:
       marts:
         core:
             +materialized: table
-        staging:
-            +materialized: view
-        stripe:
-            +materialized: view
+      stripes:
+        _stg_stripe:
+            +materialized: table
+
+      staging:
+            +materialized: table
+       
+        
 
