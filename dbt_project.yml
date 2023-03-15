@@ -35,13 +35,15 @@ models:
   happy_life:
       marts:
         core:
-            +materialized: table
-      stripes:
-        _stg_stripe:
-            +materialized: view
+          +materialized: table
+  staging:
+      jaffle_shop:
+        +materialized: table
+          
+  stripes:
+      _stg_stripe:
+        +materialized: view
 
-      staging:
-            +materialized: table
-       
+      
         
 
