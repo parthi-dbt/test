@@ -1,0 +1,8 @@
+version: 2
+
+sources: 
+  - name: poc
+    database: DBT_POC
+    schema: DBT_POC_STG
+    tables:
+      - name: LINEITEM

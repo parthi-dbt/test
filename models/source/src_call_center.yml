@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: as_call_center
+    database: dbt_poc
+    schema: dbt_poc_stg
+    tables:
+      - name: call_center
+
+

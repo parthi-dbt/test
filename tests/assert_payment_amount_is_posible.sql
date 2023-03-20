@@ -1,9 +1,10 @@
-with payments as (
-    select * from {{ref('tab_stg_strip')}}
+with cust as (
+    select * from {{ref('customer_test')}}
     )
     select 
-    orderid,
-    sum(amount) as total_amount
-    from payments
-    group by orderid
+    sum(C_NATIONKEY) as total_amount
+    from cust
+    group by C_CUSTKEY
     having total_amount < 0
+
+

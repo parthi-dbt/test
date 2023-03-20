@@ -1,0 +1,8 @@
+version: 2
+
+sources: 
+  - name: customers
+    database: dbt_poc
+    schema: dbt_poc_stg
+    tables:
+      - name: customer

@@ -1,0 +1,10 @@
+version: 2
+sources: 
+  - name: tab_stg_st
+    database: raw
+    schema: strip
+    tables:
+      - name: payment
+
+
+      

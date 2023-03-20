@@ -33,17 +33,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   happy_life:
-      marts:
-        core:
-          +materialized: table
-  staging:
-      jaffle_shop:
+    marts:
+      core:
         +materialized: table
+  staging:
+    jaffle_shop:
+      +materialized: table
           
   stripes:
-      _stg_stripe:
-        +materialized: view
-
-      
+    _stg_stripe:
+      +materialized: view
+snapshots:
+    snap_poc:      
         
 

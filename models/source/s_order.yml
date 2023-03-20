@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: order
+    database: dbt_poc
+    schema: dbt_poc_stg
+    tables:
+      - name: orders
+
